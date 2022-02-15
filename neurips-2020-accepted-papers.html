@@ -1,0 +1,254 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Angelos Katharopoulos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <link href="normalize.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+               rel="stylesheet" />
+        <style type="text/css">
+            #data-search {
+                margin-bottom: 20px;
+            }
+            #data-filter:before {
+                content: "&nbsp;"
+            }
+            #data-filter {
+                width: 60%;
+                padding: 4px;
+                font-family: monospace;
+            }
+            #data-searching {
+                display: none;
+            }
+            #data-container {
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+            #data-container .paper {
+                padding-bottom: 0px;
+            }
+            .paper {
+                margin-top: 10px;
+            }
+            .paper > span {
+                font-weight: bold;
+            }
+            .paper > div {
+                font-size: 80%;
+                margin-top: 5px;
+            }
+            .paper > div > span:after {
+                content: ", ";
+                margin-right: 10px;
+            }
+            .paper > div > span:last-child:after {
+                content: "";
+            }
+            .paper > div > span > span:first-child {
+                margin-right: 5px;
+            }
+            .paper > div > span > span:last-child {
+                font-style: italic;
+            }
+            .paper > div > span > span:last-child:after {
+                content: ")";
+            }
+            .paper > div > span > span:last-child:before {
+                content: "(";
+            }
+            #examples-table th {
+                background: #eee;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 15px;
+            }
+            #examples-table td {
+                border: 0px;
+                margin: 0px;
+                padding: 5px 15px;
+            }
+            #examples-table td:last-child {
+                text-align: center;
+            }
+            #examples-table {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header-links">
+            <div class="container">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#publications">Publications</a></li>
+                    <li><a href="/index.html#software">Software</a></li>
+                    <li class="selected">Misc</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+
+            <h2>NeurIPS 2020 Accepted Papers</h2>
+            <p>
+                The data to produce the following list is a slightly
+                <a href="/data/neurips-2020.json">processed version</a> of
+                <a href="https://neurips.cc/Conferences/2020/AcceptedPapersInitial">these</a>.
+            </p>
+            <p>
+                In the following list you can filter the papers by writing a
+                small piece of javascript code. You are creating a function
+                that should return true or false to keep or discard a paper
+                respectively. That function takes a single parameter
+                <code>paper</code> which is an object structured as follows:
+            </p>
+            <p>
+            <code><pre>
+{
+    "title": "Awesome paper",
+    "authors": [
+        {
+            "name": "Ioannis Papadopoulos",
+            "affiliation": "Company or university that is changing the world"
+        },
+        ...
+    ]
+}
+            </pre></code>
+            </p>
+            <p>
+                Since there is nothing better than an example, the following
+                table contains links that set the search accordingly.
+            </p>
+
+            <p>
+                <table id="examples-table">
+                    <tr>
+                        <th>Search</th><th>Number of papers</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.authors[0].affiliation.match(/goog/i)">
+                        First author affiliated with Google</a></td><td>79</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.authors.some((a) => a.affiliation.match(/goog/i))">
+                        Any author affiliated with Google</a></td><td>202</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.authors[0].affiliation.match(/epfl/i)">
+                        First author affiliated with EPFL</a></td><td>22</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.authors[0].affiliation.match(/eth/i)">
+                        First author affiliated with ETH</a></td><td>30</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.authors[0].affiliation.match(/mit/i)">
+                        First author affiliated with MIT</a></td><td>48</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.authors.some((a) => a.name.match(/john|johan|jean/i))">
+                        Any author named John</a></td><td>66</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.title.match(/transformer/i)">
+                        Title contains 'transformer'</a></td><td>14</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#paper.title.match(/deep/i)">
+                        Title contains 'deep'</a></td><td>154</td>
+                    </tr>
+                </table>
+            </p>
+
+            <p>
+                <div id="data-search">
+                    Filter: <input type="text" id="data-filter">
+                    <span id="data-searching">Searching ...</span>
+                </div>
+                <div>Found <span id="data-result-count"></span> paper(s)</div>
+                <div id="data-container">
+                </div>
+            </p>
+
+<script type="text/javascript">
+"use strict";
+
+function span(text) {
+    var el = document.createElement("span");
+    el.appendChild(document.createTextNode(text));
+    return el;
+}
+
+function makePaperList(papers, container, filter) {
+    var paperElements = [];
+    for (var i=0; i<papers.length; i++) {
+        var title = span(papers[i].title);
+        var authors = document.createElement("div");
+        for (var j=0; j<papers[i].authors.length; j++) {
+            var author = document.createElement("span");
+            author.appendChild(span(papers[i].authors[j].name));
+            author.appendChild(span(papers[i].authors[j].affiliation));
+            authors.appendChild(author);
+        }
+        var paper = document.createElement("div");
+        paper.classList.add("paper");
+        paper.appendChild(title);
+        paper.appendChild(authors);
+        container.appendChild(paper);
+        paperElements.push(paper);
+    }
+
+    var searching = document.getElementById("data-searching");
+    var result_count = document.getElementById("data-result-count");
+    var update_hidden = function (v) {
+        searching.style.display = "";
+        var code = (v == "") ? "true" : v;
+        var predicate = new Function("paper", "return (" + code + ");");
+        var cnt = 0;
+        for (var i=0; i<papers.length; i++) {
+            if (predicate(papers[i])) {
+                cnt += 1;
+                paperElements[i].style.display = "block";
+            } else {
+                paperElements[i].style.display = "none";
+            }
+        }
+        searching.style.display = "none";
+        result_count.innerHTML = cnt;
+    };
+
+    if (window.location.hash != "") {
+        filter.value = decodeURI(window.location.hash.substr(1));
+    }
+    update_hidden(filter.value);
+
+    filter.addEventListener("change", function () {
+        window.location.hash = this.value;
+    });
+    window.addEventListener("hashchange", function () {
+        filter.value = decodeURI(window.location.hash.substr(1));
+        update_hidden(filter.value);
+    });
+}
+
+(function () {
+    var req = new XMLHttpRequest();
+    req.addEventListener("load", function () {
+        makePaperList(
+            JSON.parse(this.responseText),
+            document.getElementById("data-container"),
+            document.getElementById("data-filter")
+        );
+    });
+    req.open("GET", "/data/neurips-2020.json");
+    req.send();
+})();
+</script>
+        </div>
+    </body>
+</html>
+

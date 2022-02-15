@@ -1,0 +1,339 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Angelos Katharopoulos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <link href="normalize.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+              integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+              crossorigin="anonymous" />
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+               rel="stylesheet" />
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <h1>Angelos Katharopoulos</h1>
+                <div id="intro-img">
+                    <img src="imgs/angelos.jpg" alt="Angelos Katharopoulos" />
+                    <div id="contact">
+                        <a href="mailto:angelos.katharopoulos@idiap.ch"><i class="fa fa-envelope"></i></a>
+                        <a href="https://scholar.google.com/citations?user=CNSO4uIAAAAJ&hl=en"><i class="fa fa-user-graduate"></i></a>
+                        <a href="https://github.com/angeloskath"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/angeloskath"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div id="intro">
+                    <p>
+                    Hello! I am a PhD student at <a
+                    href="https://idiap.ch/">Idiap Research Institute</a> and
+                    <a href="https://epfl.ch">EPFL</a> since March 2017. My PhD
+                    advisor is <a href="https://fleuret.org/francois">François
+                    Fleuret</a>.
+                    </p>
+
+                    <p>
+                    Previously, I studied electrical engineering in <a
+                    href="http://ee.auth.gr/en/">Aristotle University of
+                    Thessaloniki</a> and I worked with <a
+                    href="https://mug.ee.auth.gr/people/christos-diou/">Christos
+                    Diou</a> and <a
+                    href="https://mug.ee.auth.gr/people/anastasios-delopoulos/">Anastasios
+                    Delopoulos</a>.
+                    </p>
+
+                    <p>
+                    My research is in machine learning and in particular, I am
+                    focusing on making deep neural networks train with less
+                    compute, less memory and less samples.
+                    </p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="header-links">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#software">Software</a></li>
+                <!--<li><a href="/misc.html">Misc</a></li>-->
+            </ul>
+        </div>
+
+        <div class="container">
+            <h2 class="section-header" id="publications">Publications</h2>
+            <!-- start publication list --><div class="paper"><div class="image"><img src="imgs/teasers/neural_parts.png" alt="Neural Parts: Learning Expressive 3D Shape Abstractions with Invertible Neural Networks" /></div><div class="content"><div class="paper-title"><a href="https://paschalidoud.github.io/neural_parts">Neural Parts: Learning Expressive 3D Shape Abstractions with Invertible Neural Networks</a></div><div class="authors"><a href="https://paschalidoud.github.io/" class="author">D. Paschalidou</a><strong class="author">A. Katharopoulos</strong><a href="http://www.cvlibs.net/" class="author">A. Geiger</a><a href="https://www.cs.utoronto.ca/~fidler/" class="author">S. Fidler</a></div><div class="conference">CVPR, 2021</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://arxiv.org/pdf/2103.10429" data-type="Paper">Paper</a><a href="https://paschalidoud.github.io/neural_parts" data-type="Explore">Explore</a><a href="https://www.youtube.com/watch?v=6WK3B0IZJsw" data-type="Video">Video</a><a href="https://paschalidoud.github.io/data/Paschalidou2021CVPR_poster.pdf" data-type="Poster">Poster</a><a href="https://github.com/paschalidoud/neural_parts" data-type="Code">Code</a><a href="#" data-type="Bibtex" data-index="6">Bibtex</a><div class="link-content" data-index="0">Impressive progress in 3D shape extraction led to representations that can capture object geometries with high fidelity. In parallel, primitive-based methods seek to represent objects as semantically consistent part arrangements. However, due to the simplicity of existing primitive representations, these methods fail to accurately reconstruct 3D shapes using a small number of primitives/parts. We address the trade-off between reconstruction quality and number of parts with Neural Parts, a novel 3D primitive representation that defines primitives using an Invertible Neural Network (INN) which implements homeomorphic mappings between a sphere and the target object. The INN allows us to compute the inverse mapping of the homeomorphism, which in turn, enables the efficient computation of both the implicit surface function of a primitive and its mesh, without any additional post-processing. Our model learns to parse 3D objects into semantically consistent part arrangements without any part-level supervision. Evaluations on ShapeNet, D-FAUST and FreiHAND demonstrate that our primitives can capture complex geometries and thus simultaneously achieve geometrically accurate as well as interpretable reconstructions using an order of magnitude fewer primitives than state-of-the-art shape abstraction methods.</div><div class="link-content" data-index="6"><pre>@inproceedings{paschalidou2021nps,
+    title={Neural Parts: Learning Expressive 3D Shape Abstractions with Invertible Neural Networks},
+    author={Paschalidou, D. and Katharopoulos, A. and Geiger, A. and Fidler, S.},
+    booktitle={{Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+    year={2021},
+    url={https://arxiv.org/pdf/2103.10429}
+}</pre></div></div></div><div class="clear"></div></div><div class="paper"><div class="image"><img src="imgs/teasers/clustered_attention.png" alt="Fast Transformers with Clustered Attention" /></div><div class="content"><div class="paper-title"><a href="https://clustered-transformers.github.io">Fast Transformers with Clustered Attention</a></div><div class="authors"><a href="https://idiap.ch/~avyas" class="author">A. Vyas</a><strong class="author">A. Katharopoulos</strong><a href="https://fleuret.org/francois" class="author">F. Fleuret</a></div><div class="conference">NeurIPS, 2020</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://arxiv.org/pdf/2007.04825" data-type="Paper">Paper</a><a href="https://github.com/idiap/fast-transformers" data-type="Code">Code</a><a href="#" data-type="Bibtex" data-index="3">Bibtex</a><div class="link-content" data-index="0">Transformers have been proven a successful model for a variety of tasks in sequence modeling. However, computing the attention matrix, which is their key component, has quadratic complexity with respect to the sequence length, thus making them prohibitively expensive for large sequences. To address this, we propose clustered attention, which instead of computing the attention for every query, groups queries into clusters and computes attention just for the centroids. To further improve this approximation, we use the computed clusters to identify the keys with the highest attention per query and compute the exact key/query dot products. This results in a model with linear complexity with respect to the sequence length for a fixed number of clusters. We evaluate our approach on two automatic speech recognition datasets and show that our model consistently outperforms vanilla transformers for a given computational budget. Finally, we demonstrate that our model can approximate arbitrarily complex attention distributions with a minimal number of clusters by approximating a pretrained BERT model on GLUE and SQuAD benchmarks with only 25 clusters and no loss in performance.</div><div class="link-content" data-index="3"><pre>@article{vyas_et_al_2020,
+    author={Vyas, A. and Katharopoulos, A. and Fleuret, F.},
+    title={Fast Transformers with Clustered Attention},
+    booktitle={Proceedings of the international conference on Neural Information Processing Systems (NeurIPS)},
+    year={2020}
+}</pre></div></div></div><div class="clear"></div></div><div class="paper"><div class="image"><img src="imgs/teasers/transformer_rnn.png" alt="Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention" /></div><div class="content"><div class="paper-title"><a href="https://linear-transformers.com">Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</a></div><div class="authors"><strong class="author">A. Katharopoulos</strong><a href="https://idiap.ch/~avyas" class="author">A. Vyas</a><a href="https://nik0spapp.github.io/" class="author">N. Pappas</a><a href="https://fleuret.org/francois" class="author">F. Fleuret</a></div><div class="conference">ICML, 2020</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://arxiv.org/pdf/2006.16236.pdf" data-type="Paper">Paper</a><a href="https://colab.research.google.com/drive/1BV4OaWRAHYGeimO0cqHD86GfnfgUaKD4?usp=sharing" data-type="Explore">Explore</a><a href="https://youtu.be/KBWh7XCUAi8" data-type="Video">Video</a><a href="data/linear_transformers_slides.pdf" data-type="Slides">Slides</a><a href="https://github.com/idiap/fast-transformers" data-type="Code">Code</a><a href="#" data-type="Bibtex" data-index="6">Bibtex</a><div class="link-content" data-index="0">Transformers achieve remarkable performance in several tasks but due to their quadratic complexity, with respect to the input’s length, they are prohibitively slow for very long sequences. To address this limitation, we express the self-attention as a linear dot-product of kernel feature maps and make use of the associativity property of matrix products to reduce the complexity from O(N<sup>2</sup>) to O(N), where N is the sequence length. We show that this formulation permits an iterative implementation that dramatically accelerates autoregressive transformers and reveals their relationship to recurrent neural networks. Our linear transformers achieve similar performance to vanilla transformers and they are up to 4000x faster on autoregressive prediction of very long sequences.</div><div class="link-content" data-index="6"><pre>@inproceedings{katharopoulos2020lin,
+    title={Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention},
+    author={Katharopoulos, A. and Vyas, A. and Pappas, N. and Fleuret, F.},
+    booktitle={Proceedings of the International Conference on Machine Learning (ICML)},
+    year={2020},
+    url={https://arxiv.org/pdf/2006.16236.pdf}
+}</pre></div></div></div><div class="clear"></div></div><div class="paper"><div class="image"><img src="imgs/teasers/speed_limits.png" alt="Processing Megapixel Images with Deep Attention-Sampling Models" /></div><div class="content"><div class="paper-title"><a href="https://attention-sampling.com/">Processing Megapixel Images with Deep Attention-Sampling Models</a></div><div class="authors"><strong class="author">A. Katharopoulos</strong><a href="https://fleuret.org/francois" class="author">F. Fleuret</a></div><div class="conference">ICML, 2019</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://arxiv.org/pdf/1905.03711.pdf" data-type="Paper">Paper</a><a href="data/ats_icml_poster.pdf" data-type="Poster">Poster</a><a href="data/ats_icml_slides.pdf" data-type="Slides">Slides</a><a href="https://github.com/idiap/attention-sampling" data-type="Code">Code</a><a href="#" data-type="Bibtex" data-index="5">Bibtex</a><div class="link-content" data-index="0">Existing deep architectures cannot operate on very large signals such as megapixel images due to computational and memory constraints. To tackle this limitation, we propose a fully differentiable end-to-end trainable model that samples and processes only a fraction of the full resolution input image. The locations to process are sampled from an attention distribution computed from a low resolution view of the input. We refer to our method as attention sampling and it can process images of several megapixels with a standard single GPU setup. We show that sampling from the attention distribution results in an unbiased estimator of the full model with minimal variance, and we derive an unbiased estimator of the gradient that we use to train our model end-to-end with a normal SGD procedure. This new method is evaluated on three classification tasks, where we show that it allows to reduce computation and memory footprint by an order of magnitude for the same accuracy as classical architectures. We also show the consistency of the sampling that indeed focuses on informative parts of the input images.</div><div class="link-content" data-index="5"><pre>@inproceedings{katharopoulos2019ats,
+    title={Processing Megapixel Images with Deep Attention-Sampling Models},
+    author={Katharopoulos, A. and Fleuret, F.},
+    booktitle={Proceedings of the International Conference on Machine Learning (ICML)},
+    year={2019},
+    type={Short oral},
+    url={https://arxiv.org/pdf/1905.03711.pdf}
+}</pre></div></div></div><div class="clear"></div></div><div class="paper"><div class="image"><img src="imgs/teasers/variance_reduction.png" alt="Not All Samples Are Created Equal: Deep Learning with Importance Sampling" /></div><div class="content"><div class="paper-title"><a href="https://importance-sampling.com/">Not All Samples Are Created Equal: Deep Learning with Importance Sampling</a></div><div class="authors"><strong class="author">A. Katharopoulos</strong><a href="https://fleuret.org/francois" class="author">F. Fleuret</a></div><div class="conference">ICML, 2018</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://arxiv.org/pdf/1803.00942.pdf" data-type="Paper">Paper</a><a href="data/is_icml_poster.pdf" data-type="Poster">Poster</a><a href="data/is_icml_slides.pdf" data-type="Slides">Slides</a><a href="https://github.com/idiap/importance-sampling" data-type="Code">Code</a><a href="#" data-type="Bibtex" data-index="5">Bibtex</a><div class="link-content" data-index="0">Deep neural network training spends most of the computation on examples that are properly handled, and could be ignored. We propose to mitigate this phenomenon with a principled importance sampling scheme that focuses computation  on  “informative”  examples, and reduces the variance of the stochastic gradients during training. Our contribution is twofold: first, we derive a tractable upper bound to the per-sample gradient norm, and second we derive an estimator of the variance reduction achieved with importance sampling, which enables us to switch it on when it will result in an actual speedup. The resulting scheme can be used by changing a few lines of code in a standard SGD procedure, and we demonstrate experimentally, on image classification, CNN fine-tuning, and RNN training, that for a fixed wall-clock time budget, it provides a reduction of the train losses of up to an order of magnitude and a relative improvement of test errors between 5% and 17%.</div><div class="link-content" data-index="5"><pre>@inproceedings{katharopoulos2018is,
+    title={Not All Samples Are Created Equal: Deep Learning with Importance Sampling},
+    author={Katharopoulos, A. and Fleuret, F.},
+    booktitle={Proceedings of the International Conference on Machine Learning (ICML)},
+    year={2018},
+    type={Short oral},
+    url={https://arxiv.org/pdf/1803.00942.pdf}
+}</pre></div></div></div><div class="clear"></div></div><div class="paper"><div class="image"><img src="imgs/teasers/local_feature_aggregation.png" alt="Learning local feature aggregation functions with backpropagation" /></div><div class="content"><div class="paper-title"><a href="https://arxiv.org/pdf/1706.08580.pdf">Learning local feature aggregation functions with backpropagation</a></div><div class="authors"><a href="https://paschalidoud.github.io/" class="author">D. Paschalidou</a><strong class="author">A. Katharopoulos</strong><a href="https://mug.ee.auth.gr/people/christos-diou/" class="author">C. Diou</a><a href="https://mug.ee.auth.gr/people/anastasios-delopoulos/" class="author">A. Delopoulos</a></div><div class="conference">EUSIPCO, 2017</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://arxiv.org/pdf/1706.08580.pdf" data-type="Paper">Paper</a><a href="data/eusipco_poster.pdf" data-type="Poster">Poster</a><a href="https://github.com/paschalidoud/feature-aggregation" data-type="Code">Code</a><a href="#" data-type="Bibtex" data-index="4">Bibtex</a><div class="link-content" data-index="0">This paper introduces a family of local feature aggregation functions and a novel method to estimate their parameters, such that they generate optimal representations for classification (or any task that can be expressed as a cost function minimization problem). To achieve that, we compose the local feature aggregation function with the classifier cost function and we backpropagate the gradient of this cost function in order to update the local feature aggregation function parameters. Experiments on synthetic datasets indicate that our method discovers parameters that model the class-relevant information in addition to the local feature space. Further experiments on a variety of motion and visual descriptors, both on image and video datasets, show that our method outperforms other state-of-the-art local feature aggregation functions, such as Bag of Words, Fisher Vectors and VLAD, by a large margin.</div><div class="link-content" data-index="4"><pre>@inproceedings{katharopoulos2017learning
+      title = {Learning local feature aggregation functions with backpropagation},
+      author = {Paschalidou, Despoina and Katharopoulos, Angelos and Diou, Christos and Delopoulos, Anastasios},
+      publisher = {IEEE},
+      month = aug,
+      year = {2017},
+      url = {http://ieeexplore.ieee.org/Abstract/document/8081307/},
+}</pre></div></div></div><div class="clear"></div></div><div class="paper"><div class="image"><img src="imgs/teasers/fslda.png" alt="Fast Supervised LDA for Discovering Micro-Events in Large-Scale Video Datasets" /></div><div class="content"><div class="paper-title"><a href="http://ldaplusplus.com">Fast Supervised LDA for Discovering Micro-Events in Large-Scale Video Datasets</a></div><div class="authors"><strong class="author">A. Katharopoulos</strong><a href="https://paschalidoud.github.io/" class="author">D. Paschalidou</a><a href="https://mug.ee.auth.gr/people/christos-diou/" class="author">C. Diou</a><a href="https://mug.ee.auth.gr/people/anastasios-delopoulos/" class="author">A. Delopoulos</a></div><div class="conference">ACMM, 2016</div><div class="links"><a href="#" data-type="Abstract" data-index="0">Abstract</a><a href="https://mug.ee.auth.gr/wp-content/uploads/fsLDA.pdf" data-type="Paper">Paper</a><a href="data/fslda_poster.pdf" data-type="Poster">Poster</a><a href="https://github.com/angeloskath/supervised-lda" data-type="Code">Code</a><a href="https://mug.ee.auth.gr/discovering-micro-events-video-data-using-topic-modeling/" data-type="Blog">Blog</a><a href="#" data-type="Bibtex" data-index="5">Bibtex</a><div class="link-content" data-index="0">This paper introduces fsLDA, a fast variational inference method for supervised LDA, which overcomes the computational limitations of the original supervised LDA and enables its application in large-scale video datasets. In addition to its scalability, our method also overcomes the drawbacks of standard, unsupervised LDA for video, including its focus on dominant but often irrelevant video information (e.g. background, camera motion). As a result, experiments in the UCF11 and UCF101 datasets show that our method consistently outperforms unsupervised LDA in every metric. Furthermore, analysis shows that class-relevant topics of fsLDA lead to sparse video representations and encapsulate high-level information corresponding to parts of video events, which we denote 'micro-events'</div><div class="link-content" data-index="5"><pre>@inproceedings{katharopoulos2016fast
+        title = {Fast Supervised LDA for Discovering Micro-Events in Large-Scale Video Datasets},
+        author = {Katharopoulos, Angelos and Paschalidou, Despoina and Diou, Christos and Delopoulos, Anastasios},
+        booktitle = {Proceedings of the 2016 ACM on Multimedia Conference},
+        pages = {332,336},
+        month = oct,
+        year = {2016},
+        url = {http://dl.acm.org/citation.cfm?id=2967237},
+        month_numeric = {10}
+}</pre></div></div></div><div class="clear"></div></div><!-- end publication list -->
+        </div>
+
+        <div class="container">
+            <h2 id="software">Software</h2>
+            <p>The following is a non-exhaustive list of open source software
+            projects that I started or contribute to. They are at various
+            stages of development and usefulness so tread carefully. Each
+            project may be distributed under different open source license
+            although I prefer highly permissive licenses such as the <a
+            href="https://www.opensource.org/licenses/MIT">MIT</a>.</p>
+
+            <div class="software-project">
+                <div class="info">
+                    <div class="title">Fast Transformers</div>
+                    <div class="badges">
+                        <img alt="GitHub stars"
+                             src="https://img.shields.io/github/stars/idiap/fast-transformers?style=social">
+                        <img alt="PyPI Downloads"
+                             src="https://pepy.tech/badge/pytorch-fast-transformers">
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/idiap/fast-transformers">Git</a> /
+                        <a href="https://fast-transformers.github.io/">Docs</a>
+                    </div>
+                </div>
+                <div class="description">
+                    Fast Transformers is a library for efficient transformer
+                    implementations for PyTorch with a focus on efficient
+                    self-attention.
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="software-project">
+                <div class="info">
+                    <div class="title">simple-3dviz</div>
+                    <div class="badges">
+                        <img alt="GitHub stars"
+                             src="https://img.shields.io/github/stars/angeloskath/simple-3dviz?style=social">
+                        <img alt="PyPI Downloads"
+                             src="https://pepy.tech/badge/simple-3dviz">
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/angeloskath/simple-3dviz">Git</a> /
+                        <a href="https://simple-3dviz.com/">Docs</a>
+                    </div>
+                </div>
+                <div class="description">
+                    simple-3dviz is a lightweight and easy-to-use library that
+                    provides an easy interface for visualizing 3D objects with
+                    hundreds of thousands of vertices efficiently without the
+                    overhead of writing hundreds of lines of code.
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="software-project">
+                <div class="info">
+                    <div class="title">Attention Sampling</div>
+                    <div class="badges">
+                        <img alt="GitHub stars"
+                             src="https://img.shields.io/github/stars/idiap/attention-sampling?style=social">
+                        <img alt="PyPI Downloads"
+                             src="https://pepy.tech/badge/attention-sampling">
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/idiap/attention-sampling">Git</a> /
+                        <a href="https://attention-sampling.com/">Docs</a>
+                    </div>
+                </div>
+                <div class="description">
+                    Attention sampling allows neural networks to process
+                    extremely large images with a complexity decoupled from the
+                    size of the images.
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="software-project">
+                <div class="info">
+                    <div class="title">Importance Sampling</div>
+                    <div class="badges">
+                        <img alt="GitHub stars"
+                             src="https://img.shields.io/github/stars/idiap/importance-sampling?style=social">
+                        <img alt="PyPI Downloads"
+                             src="https://pepy.tech/badge/keras-importance-sampling">
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/idiap/importance-sampling">Git</a> /
+                        <a href="https://importance-sampling.com/">Docs</a>
+                    </div>
+                </div>
+                <div class="description">
+                    Keras Importance Sampling is a library that speeds up
+                    neural network training by selecting important examples from
+                    the dataset for each iteration.
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="software-project">
+                <div class="info">
+                    <div class="title">LDA++</div>
+                    <div class="badges">
+                        <img alt="GitHub stars"
+                             src="https://img.shields.io/github/stars/angeloskath/supervised-lda?style=social">
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/angeloskath/supervised-lda">Git</a> /
+                        <a href="http://ldaplusplus.com/">Docs</a>
+                    </div>
+                </div>
+                <div class="description">
+                    LDA++ is a library that allows experimentation with the
+                    Latent Dirichlet Allocation topic modeling algorithm and
+                    provides relatively fast supervised and
+                    unsupervised implementations.
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="software-project">
+                <div class="info">
+                    <div class="title">NlpTools (PHP)</div>
+                    <div class="badges">
+                        <img alt="GitHub stars"
+                             src="https://img.shields.io/github/stars/angeloskath/php-nlp-tools?style=social">
+                        <img alt="Packagist Downloads"
+                             src="https://img.shields.io/packagist/dt/nlp-tools/nlp-tools?color=blue">
+                    </div>
+                    <div class="software-links">
+                        <a href="https://github.com/angeloskath/php-nlp-tools">Git</a> /
+                        <a href="http://php-nlp-tools.com/">Docs</a>
+                    </div>
+                </div>
+                <div class="description">
+                    NlpTools is the most comprehensive PHP library for natural
+                    language processing. It provides a relatively large
+                    collection of algorithms for text classification,
+                    clustering, topic modeling, stemming, preprocessing and
+                    more.
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <span>&copy; 2020 Angelos Katharopoulos</span>
+                <span>
+                    The design is inspired from <a
+                    href="https://paschalidoud.github.io/">Despoina</a> and <a
+                    href="http://www.robots.ox.ac.uk/~afourast/">Triantafyllos</a>.
+                </span>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            // Listen to pub link clicks and show/hide abstract and bibtex
+            document.querySelectorAll(".links").forEach(function (p) {
+                p.addEventListener("click", function (ev) {
+                    // Make sure that the click is coming from a link
+                    if (ev.target.nodeName != "A") {
+                        return;
+                    }
+
+                    // Find the index of the div to toggle or return
+                    var i = ev.target.dataset["index"];
+                    if (i == undefined) {
+                        return;
+                    }
+
+                    // Make sure to remove something else that was displayed
+                    // and toggle the current one
+                    Array.prototype.forEach.call(
+                        ev.target.parentNode.children,
+                        function (sibling) {
+                            // We don't care about links etc
+                            if (sibling.nodeName != "DIV") {
+                                return;
+                            }
+
+                            // Hide others
+                            if (sibling.dataset["index"] != i) {
+                                sibling.style.display = "none";
+                            }
+
+                            // toggle the correct one
+                            else {
+                                if (sibling.style.display != "block") {
+                                    sibling.style.display = "block";
+                                } else {
+                                    sibling.style.display = "none";
+                                }
+                            }
+                        }
+                    );
+                    ev.preventDefault();
+                });
+            });
+
+            // Listen to anchor links and scroll them into view
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172491464-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-172491464-1');
+        </script>
+    </body>
+</html>

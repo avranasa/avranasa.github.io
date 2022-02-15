@@ -1,0 +1,130 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Angelos Katharopoulos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <link href="normalize.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+               rel="stylesheet" />
+        <style type="text/css">
+            #data-search {
+                margin-bottom: 20px;
+            }
+            #data-filter:before {
+                content: "&nbsp;"
+            }
+            #data-filter {
+                width: 60%;
+                padding: 4px;
+                font-family: monospace;
+            }
+            #data-searching {
+                display: none;
+            }
+            #data-container {
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+            #data-container .paper {
+                padding-bottom: 0px;
+            }
+            .paper {
+                margin-top: 10px;
+            }
+            .paper > span {
+                font-weight: bold;
+            }
+            .paper > div {
+                font-size: 80%;
+                margin-top: 5px;
+            }
+            .paper > div > span:after {
+                content: ", ";
+                margin-right: 10px;
+            }
+            .paper > div > span:last-child:after {
+                content: "";
+            }
+            .paper > div > span > span:first-child {
+                margin-right: 5px;
+            }
+            .paper > div > span > span:last-child {
+                font-style: italic;
+            }
+            .paper > div > span > span:last-child:after {
+                content: ")";
+            }
+            .paper > div > span > span:last-child:before {
+                content: "(";
+            }
+            #examples-table th {
+                background: #eee;
+                border: 0px;
+                margin: 0px;
+                padding: 5px 15px;
+            }
+            #examples-table td {
+                border: 0px;
+                margin: 0px;
+                padding: 5px 15px;
+            }
+            #examples-table td:last-child {
+                text-align: center;
+            }
+            #examples-table {
+                margin-bottom: 20px;
+            }
+            .presentations-list li {
+                line-height: 180%;
+            }
+            .presentation-date:before {
+                content: "on";
+                display: inline-block;
+                padding: 0px 5px 0px 5px;
+            }
+            .presentation-date {
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header-links">
+            <div class="container">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#publications">Publications</a></li>
+                    <li><a href="/index.html#software">Software</a></li>
+                    <li class="selected">Misc</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+
+            <h2>Presentations</h2>
+            <p>
+                This page contains a list of past or future presentations that
+                I have given or will give. Chances are that the slides are
+                going to be an amalgamation of my publication slides, so if you
+                are interested in a specific paper it is better to check <a
+                href="/index.html#publications">my publication list</a>.
+            </p>
+
+            <p>
+                <ul class="presentations-list">
+                    <li>
+                        <i><a href="/data/thesis_presentation.pdf">Stop Wasting
+                        my FLOPs</a></i> @ My PhD Defense <span class="presentation-date">14 Dec 2021</span>
+                    </li>
+                    <li>
+                        <i><a href="/data/ml_collective_slides.pdf">Efficient
+                        Transformers: Kernels and More</a></i> @ <a
+                        href="http://mlcollective.org/dlct/">ML Collective</a> <span class="presentation-date">30 Oct 2021</span>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </body>
+</html>
