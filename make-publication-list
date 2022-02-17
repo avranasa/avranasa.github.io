@@ -296,7 +296,7 @@ publications = [
         ]
     ),
     Paper(
-        "Resource allocation for latency sensitive wireless systems",
+        "Spatial multi-LRU caching for wireless networks with coverage overlaps",
         None,
         "data/teaser/MultiLRU.jpg",
         author_list(authors,"tasos","apostolos"),
