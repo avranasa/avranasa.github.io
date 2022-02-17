@@ -55,61 +55,279 @@ def author_list(authors, *names):
 
 
 authors = {
-    "despi": Author("Despoina Paschalidou", "https://paschalidoud.github.io/"),
-    "angelos": Author("Angelos Katharopoulos", ""),
-    "diou": Author("Christos Diou", "https://mug.ee.auth.gr/people/christos-diou/"),
-    "delo": Author("Anastasios Delopoulos", "https://mug.ee.auth.gr/people/anastasios-delopoulos/"),
-    "frankie": Author("François Fleuret", "https://fleuret.org/francois"),
-    "apoorv": Author("Apoorv Vyas", "https://idiap.ch/~avyas"),
-    "nikos": Author("Nikolaos Pappas", "https://nik0spapp.github.io/"),
-    "ageiger": Author("Andreas Geiger", "http://www.cvlibs.net/"),
-    "sfidler": Author("Sanja Fidler", "https://www.cs.utoronto.ca/~fidler/")
+    "apostolos": Author("Apostolos Avranas", ""),
+    "marios": Author("Marios Kountouris", "https://www.eurecom.fr/~kountour/"),
+    "ciblat": Author("Philippe Ciblat", "https://perso.telecom-paristech.fr/ciblat/"),
+    "tasos": Author("Anastasios Giovanidis", "https://anastasiosgiovanidis.net/"),
+    "pappas": Author("Nikolaos Pappas", "https://pappas-nikolaos.github.io/"),
 }
 
+
+
 conferences = {
+    "thesis": Conference("", "Thesis"),
+    "globecom":Conference("IEEE Global Communications Conference", "GLOBECOM"),
+    "icc":Conference("IEEE International Conference on Communications","ICC"),
+    "wiopt":Conference("International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks", "WiOpt"),
+    "sigmetrics": Conference("ACM SIGMETRICS Performance Evaluation Review", "ACM SIGMETRICS"),
+    "arxiv": Conference("", "arXiv"),
+    "jsac":Conference("IEEE Journal on Selected Areas in Communications","Journal on Sel. Areas in Commun."),
     "preprint": Conference("", "Preprint"),
     "cvpr": Conference("Computer Vision and Pattern Recognition", "CVPR"),
     "neurips": Conference("Neural Information Processing Systems", "NeurIPS"),
     "icml": Conference("International Conference on Machine Learning", "ICML"),
-    "eusipco": Conference("European Signal Processing Conference", "EUSIPCO"),
-    "acmmm": Conference("ACM Multimedia Conference", "ACMM")
 }
 
 publications = [
     Paper(
-        "Neural Parts: Learning Expressive 3D Shape Abstractions with Invertible Neural Networks",
-        "https://paschalidoud.github.io/neural_parts",
-        "imgs/teasers/neural_parts.png",
-        author_list(authors, "despi", "angelos", "ageiger", "sfidler"),
-        conferences["cvpr"],
-        2021,
+        "Coded ResNeXt: a network for designing disentangled information paths",
+        None,
+        "data/teaser/CodedResNeXt_MainIdea.png",
+        author_list(authors, "apostolos", "marios", ),
+        conferences["arxiv"],
+        2022,
         None,
         [
             Link("Abstract", None,
-                 ("Impressive progress in 3D shape extraction led to "
-                  "representations that can capture object geometries with high "),
+                 ("To avoid treating neural networks as highly complex black boxes, the deep learning research community has "
+                "tried to build interpretable models allowing humans to understand the decisions taken by the model. Unfortunately, "
+                'the focus is mostly on manipulating only the very high-level features associated with the last layers. In this work, we '
+                'look at neural network architectures for classification in a more general way and introduce an algorithm which defines '
+                'before the training the paths of the network through which the per-class information flows. We show that using our algorithm '
+                'we can extract a lighter single-purpose binary classifier for a particular class by removing the parameters that '
+                'do not participate in the predefined information path of that  class, which is approximately 60% of the total parameters. '
+                'Notably, leveraging coding theory to design the information paths enables us to use intermediate network layers for'
+                'making early predictions without having to evaluate the full network. We demonstrate that a slightly modified ResNeXt'
+                'model, trained with our algorithm, can achieve higher classification accuracy on CIFAR-10/100 and ImageNet than'
+                'the original ResNeXt, while having all the aforementioned properties.'),
                  None),
-            Link("Paper", "https://arxiv.org/pdf/2103.10429", None, None),
-            Link("Explore", "https://paschalidoud.github.io/neural_parts", None, None),
-            Link("Video", "https://www.youtube.com/watch?v=6WK3B0IZJsw", None, None),
-            Link("Poster", "https://paschalidoud.github.io/data/Paschalidou2021CVPR_poster.pdf", None, None),
-            Link("Code", "https://github.com/paschalidoud/neural_parts", None, None),
+            Link("Paper", "https://arxiv.org/pdf/2202.05343.pdf", None, None),
+            Link("Code", "https://github.com/avranasa/Coded-ResNeXt", None, None),
             Link("Bibtex", None, None,
-                 ("@inproceedings{paschalidou2021nps,\n"
-                  "    title={Neural Parts: Learning Expressive 3D Shape "
-                  "Abstractions with Invertible Neural Networks},\n"
-                  "    author={Paschalidou, D. and Katharopoulos, A. and "
-                  "Geiger, A. and Fidler, S.},\n"
-                  "    booktitle={{Proceedings IEEE Conf. on Computer Vision "
-                  "and Pattern Recognition (CVPR)}},\n"
-                  "    year={2021},\n"
-                  "    url={https://arxiv.org/pdf/2103.10429}\n"
+                 ("@inproceedings{avranas2022coded,\n"
+                  "title={Coded ResNeXt: a network for designing disentangled information paths},\n"
+                  "author={Apostolos Avranas and Marios Kountouris},\n"
+                  "year={2022},\n"
+                  "eprint={2202.05343},\n"
+                  "archivePrefix={arXiv},\n"
+                  "url={https://arxiv.org/pdf/2202.05343.pdf}\n"
                   "}"))
         ]
     ),
-
+    Paper(
+        "Resource allocation for latency sensitive wireless systems",
+        None,
+        "data/teaser/PhD_Champagne_whitened.png",
+        author_list(authors, "apostolos" ),
+        conferences["thesis"],
+        2020,
+        None,
+        [
+            Link("Abstract", None,
+                 ("The new generation of wireless systems 5G aims not only to convincingly exceed its predecessor (LTE) data rate but to "
+                  "work with more dimensions. For instance, more user classes were introduced associated with different available operating points "
+                  "on the trade-off of data rate, latency, reliability. New applications, including augmented "
+                'reality, autonomous driving, industry automation and tele-surgery, push the need for reliable communications to be carried out under extremely stringent latency constraints. '
+                'How to manage the physical level in order to successfully meet those service guarantees without wasting valuable and expensive resources is a hard question. Moreover, as the '
+                'permissible communication latencies shrink, allowing retransmission protocol within this limited time interval is questionable. In this thesis, we first pursue to answer those two '
+                'questions. Concentrating on the physical layer and specifically on a point to point communication system, we aim to answer if there is any possible resource allocation of power '
+                'and blocklength that will render an Hybrid Automatic ReQuest (HARQ) protocol with any number of retransmissions beneficial. Unfortunately, the short latency requirements force '
+                'only a limited number of symbols to possibly be transmitted which in its turn yields the use of the traditional Shannon theory inaccurate. Hence, more involved expressions '
+                'using finite blocklength theory must be employed rendering the problem substantially more complicate. We manage to solve the problem firstly for the additive white gaussian '
+                'noise (AWGN) case after appropriate mathematical manipulations and the introduction of an algorithm based on dynamic programming. Later we move on the more general case where '
+                'the signal is distorted by a Ricean channel fading. We investigate how the scheduling decisions are affected given the two opposite cases of Channel State Information (CSI), one '
+                'where only the statistical properties of the channel is known, i.e. statistical CSI, and one where the exact value of the channel is provided to the transmitter, i.e. full CSI. '
+                'Finally we ask the same question one layer above, i.e. the Medium Access Control (MAC). The resource allocation must be performed now accross multiple users. The '
+                'setup for each user remains the same, meaning that a specific amount of information must be delivered successfully under strict latency constraints within which retransmissions are '
+                'allowed. As 5G categorize users to different classes users according to their needs, we model the traffic under the same concept so each user belongs to a different class defining '
+                'its latency and data needs. We develop a deep reinforcement learning algorithm that manages to train a neural network model that competes conventional approaches using optimization '
+                'or combinatorial algorithms. In our simulations, the neural network model actually manages to outperform them in both statistical and full CSI case'),
+                 None),
+            Link("Thesis", "https://tel.archives-ouvertes.fr/tel-02881991/file/86154_AVRANAS_2020_archivage.pdf", None, None),
+            Link("Presentation","https://github.com/avranasa/avranasa.github.io/blob/main/data/Papers/PresentationThesis.pdf",None,None),
+            Link("Bibtex", None, None,
+                 ("@phdthesis{avranas:tel-02881991,\n"
+                  "title={{Resource allocation for latency sensitive wireless systems}},\n"
+                  "author={Apostolos Avranas},\n"
+                  "year={2020},\n"
+                  "number= {2020IPPAT021},\n"
+                  "school ={{Institut Polytechnique de Paris}},\n"
+                  "url = {https://tel.archives-ouvertes.fr/tel-02881991},\n"
+                  "}"))
+        ]
+    ),    
+    Paper(
+        "Throughput Maximization and IR-HARQ Optimization for URLLC Traffic in 5G Systems",
+        None,
+        "data/teaser/ICC2019_ThEnBytes.png",
+        author_list(authors, "apostolos", "marios", "ciblat" ),
+        conferences["icc"],
+        2019,
+        None,
+        [
+            Link("Abstract", None,
+                 ('Emerging 5G networks will need to efficiently support ultra-reliable, low-latency communications (URLLC) services, which require extremely low latency (msec order) '
+                 'with very high reliability (99.999%). We consider a URLLC system with short packets and incremental redundancy hybrid automatic repeat request (IR-HARQ). We aim at '
+                 'maximizing the throughput by optimally tuning the IR-HARQ mechanism subject to URLLC constraints and a fixed energy budget. We propose a dynamic programming algorithm '
+                 'for solving the throughput maximization problem in the finite blocklength regime and assess its performance numerically.'),
+                 None),
+            Link("Paper", "https://perso.telecom-paristech.fr/ciblat/docs_recherche/congres/icc2019.pdf", None, None),
+            Link("Presentation","https://github.com/avranasa/avranasa.github.io/blob/main/data/Papers/PresentationICC_2018.pdf",None,None),
+            Link("Bibtex", None, None,
+                 ("@inproceedings{avranas2019throughput,\n"
+                  "title={{Throughput maximization and IR-HARQ optimization for URLLC traffic in 5G systems}},\n"
+                  "author={Avranas, Apostolos and Kountouris, Marios and Ciblat, Philippe},\n"
+                  "year={2019},\n"
+                  "booktitle={ICC 2019-2019 IEEE International Conference on Communications (ICC)},\n"
+                  "doi={10.1109/ICC.2019.8761154}\n"
+                  "}"))
+        ]
+    ),
+    Paper(
+        "The influence of CSI in ultra-reliable low-latency communications with IR-HARQ",
+        None,
+        "data/teaser/Globecom2019_EThVsA.png",
+        author_list(authors, "apostolos", "marios", "ciblat" ),
+        conferences["globecom"],
+        2019,
+        None,
+        [
+            Link("Abstract", None,
+                 ('Emerging 5G networks will need to efficiently support ultra-reliable, low-latency communication (URLLC), which requires extremely low latency (at msec order) with very high '
+                 'reliability (99.999%). In this work, we consider a URLLC system with incremental redundancy hybrid automatic repeat request (IR-HARQ) and investigate the effect of channel '
+                 'state information (CSI) at the transmitter on throughput and energy consumption optimization. For that, we analyze the feasibility region and the performance in block '
+                 'fading channels for the cases of full and statistical CSI. Our results show that in our setup the full CSI scheme is less robust and we also reveal a desirable balance '
+                 'between the trade-off quantities of energy and throughput.'),
+                 None),
+            Link("Paper", "https://hal.telecom-paris.fr/hal-02282196/document", None, None),
+            Link("Presentation","https://github.com/avranasa/avranasa.github.io/blob/main/data/Papers/PresentationGlobecom2019.pdf",None,None),
+            Link("Bibtex", None, None,
+                 ("@inproceedings{avranas2019influence,\n"
+                  "title={{The influence of CSI in ultra-reliable low-latency communications with IR-HARQ}},\n"
+                  "author={Avranas, Apostolos and Kountouris, Marios and Ciblat, Philippe},\n"
+                  "year={2019},\n"
+                  "booktitle={2019 IEEE Global Communications Conference (GLOBECOM)},\n"
+                  "}"))
+        ]
+    ),
+    Paper(
+        "Energy-Latency Tradeoff in Ultra-Reliable Low-Latency Communication with Retransmissions",
+        None,
+        "data/teaser/Non-convexity.png",
+        author_list(authors, "apostolos", "marios", "ciblat" ),
+        conferences["jsac"],
+        2018,
+        None,
+        [
+            Link("Abstract", None,
+                 ('High-fidelity, real-time interactive applications are envisioned with the emergence of the Internet of Things (IoT) and tactile Internet by means of ultra-reliable low-latency '
+                 'communications (URLLC). Exploiting time diversity for fulfilling the URLLC requirements in an energy efficient manner is a challenging task due to the nontrivial interplay among packet '
+                 'size, retransmission rounds and delay, and transmit power. In this paper, we study the fundamental energy-latency tradeoff in URLLC systems employing incremental redundancy (IR)'
+                 'hybrid automatic repeat request (HARQ). We cast the average energy minimization problem with a finite blocklength (latency) constraint and feedback delay, which is non-convex. We propose '
+                 'a dynamic programming algorithm for energy efficient IR-HARQ optimization in terms of number of retransmissions, blocklength and power per round. Numerical results show that our IR-HARQ '
+                 'approach could provide around 25% energy saving compared to one-shot transmission (no HARQ). '),
+                 None),
+            Link("Paper", "https://github.com/avranasa/avranasa.github.io/blob/main/data/Papers/jsac2018.pdf", None, None),
+            Link("Bibtex", None, None,
+                 ("@ARTICLE{avranas2018energy,\n"
+                  "title={Energy-Latency Tradeoff in Ultra-Reliable Low-Latency Communication With Retransmissions},\n"
+                  "author={Avranas, Apostolos and Kountouris, Marios and Ciblat, Philippe},\n"
+                  "year={2018},\n"
+                  "volume={36},\n"
+                  "number={11},\n"
+                  "journal={IEEE Journal on Selected Areas in Communications}, \n"
+                  "doi={10.1109/JSAC.2018.2874143},\n"
+                  "}"))
+        ]
+    ),
+    Paper(
+        "Energy-Latency Tradeoff in Ultra-Reliable Low-Latency Communication with Short Packets",
+        None,
+        "data/teaser/Globecom2018_GainHARQvsDelay.png",
+        author_list(authors, "apostolos", "marios", "ciblat" ),
+        conferences["globecom"],
+        2018,
+        None,
+        [
+            Link("Abstract", None,
+                 ('We consider an ultra-reliable low-latency communication (URLLC) system with short packets employing hybrid automatic repeat request (HARQ). Depending on the delay of '
+                 'HARQ feedback and retransmissions, the latency constraint can be either violated or fulfilled at the expense of power consumption. We focus on the energy-latency '
+                 'tradeoff and examine whether it is better to do one-shot transmission or use HARQ. We analyze the energy consumption for incremental redundancy (IR) HARQ and compare '
+                 'it with the no HARQ case. The analysis relies on closed-form expressions for the outage probability of IR-HARQ with variables both the blocklength and the power. Our '
+                 'results show that for a wide range of blocklength, when the feedback delay is more than half the latency constraint, it is beneficial in terms of energy to use one-shot '
+                 'transmission (i.e. no HARQ).'),
+                 None),
+            Link("Paper", "https://github.com/avranasa/avranasa.github.io/blob/main/data/Papers/Globecom_2018.pdf", None, None),
+            Link("Bibtex", None, None,
+                 ("@inproceedings{avranas2018globecomEnergy,\n"
+                  "title={{Energy-latency tradeoff in ultra-reliable low-latency communication with short packets}},\n"
+                  "author={Avranas, Apostolos and Kountouris, Marios and Ciblat, Philippe},\n"
+                  "year={2018},\n"
+                  "booktitle={2019 IEEE Global Communications Conference (GLOBECOM)},\n"
+                  "}"))
+        ]
+    ),
+    Paper(
+        "QoS provisioning in large wireless networks",
+        None,
+        None,
+        author_list(authors, "marios", "pappas", "apostolos" ),
+        conferences["wiopt"],
+        2018,
+        None,
+        [
+            Link("Abstract", None,
+                 ('Quality of service (QoS) provisioning in nextgeneration mobile communications systems entails a deep understanding of the delay performance. The delay in wireless '
+                 'networks is strongly affected by the traffic arrival process and the service process, which in turn depends on the medium access protocol and the '
+                 'signal-to-interference-plus-noise ratio (SINR) distribution. In this work, we characterize the conditional distribution of the service process given the point '
+                 'process in Poisson bipolar networks. We then provide an upper bound on the delay violation probability combining tools from stochastic network calculus and stochastic '
+                 'geometry. Furthermore, we analyze the delay performance under statistical queueing constraints using the effective capacity formulation. The impact of QoS '
+                 'requirements, network geometry and link distance on the delay performance is identified. Our results provide useful insights for guaranteeing stringent delay '
+                 'requirements in large wireless networks.'),
+                 None),
+            Link("Paper", "https://arxiv.org/pdf/1804.07394.pdf", None, None),
+            Link("Bibtex", None, None,
+                 ("@inproceedings{kountouris2018qos,\n"
+                  "title={{QoS provisioning in large wireless networks}},\n"
+                  "author={Kountouris, Marios and Pappas, Nikolaos and Avranas, Apostolos},\n"
+                  "year={2018},\n"
+                  "booktitle={2018 16th International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt)},\n"
+                  "}"))
+        ]
+    ),
+    Paper(
+        "Resource allocation for latency sensitive wireless systems",
+        None,
+        "data/teaser/MultiLRU.jpg",
+        author_list(authors,"tasos","apostolos"),
+        conferences["sigmetrics"],
+        2016,
+        None,
+        [
+            Link("Abstract", None,
+                 ('This article introduces a novel family of decentralised caching policies, applicable to wireless networks with finite storage at the edge-nodes (stations). '
+                 'These policies are based on the Least-Recently-Used replacement principle, and are, here, referred to as spatial multi-LRU. Based on these, cache inventories '
+                 'are updated in a way that provides content diversity to users who are covered by, and thus have access to, more than one station. Two variations are proposed, '
+                 'namely the multi-LRU-One and -All, which differ in the number of replicas inserted in the involved caches. By introducing spatial approximations, we propose a '
+                 'Che-like method to predict the hit probability, which gives very accurate results under the Independent Reference Model (IRM). It is shown that the performance '
+                 'of multi-LRU increases the more the multicoverage areas increase, and it approaches the performance of other proposed centralised policies, when multi-coverage '
+                 'is sufficient. For IRM traffic multi-LRU-One outperforms multi-LRU-All, whereas when the traffic exhibits temporal locality the -All variation can perform better.'),
+                 None),
+            Link("Paper", "https://arxiv.org/pdf/1602.07623.pdf", None, None),
+            Link("Bibtex", None, None,
+                 ("@article{giovanidis2016spatial,\n"
+                  "title={{Spatial multi-LRU caching for wireless networks with coverage overlaps}},\n"
+                  "author={Giovanidis, Anastasios and Avranas, Apostolos},\n"
+                  "journal={ACM SIGMETRICS Performance Evaluation Review},\n"
+                  "year={2016},\n"
+                  "volume={44},\n"
+                  "number= 1,\n"
+                  "pages={403--405},\n"
+                  "publisher={ACM New York, NY, USA}\n"
+                  "}"))
+        ]
+    ),
 ]
-
 
 def build_publications_list(publications):
     def image(paper):
