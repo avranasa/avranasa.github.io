@@ -14,7 +14,7 @@ def _print(args, text, **kwargs):
 class Author(namedtuple("Author", ["name", "url"])):
     @property
     def is_me(self):
-        return self.name == "Angelos Katharopoulos"
+        return self.name == "Apostolos Avranas"
 
     @property
     def first_name(self):
