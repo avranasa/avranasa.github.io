@@ -80,6 +80,42 @@ conferences = {
 
 publications = [
     Paper(
+        "Deep Reinforcement Learning for Resource Constrained Multiclass Scheduling in Wireless Networks",
+        None,
+        "data/teaser/NN_Diagram_resized.png",
+        author_list(authors, "apostolos", "ciblat", "marios", ),
+        conferences["arxiv"],
+        2022,
+        None,
+        [
+            Link("Abstract", None,
+                 ("The problem of resource constrained scheduling in a dynamic and heterogeneous wireless setting "
+                "is considered here. In our setup, the available limited bandwidth resources are allocated in order to "
+                "serve randomly arriving service demands, which in turn belong to different classes in terms of payload "
+                "data requirement, delay tolerance, and importance/priority. In addition to heterogeneous traffic, another "
+                "major challenge stems from random service rates due to time-varying wireless communication channels. "
+                "Various approaches for scheduling and resource allocation can be used, ranging from simple greedy "
+                "heuristics and constrained optimization to combinatorics. Those methods are tailored to specific network "
+                "or application configuration and are usually suboptimal. To this purpose, we resort to deep reinforcement "
+                "learning (DRL) and propose a distributional Deep Deterministic Policy Gradient (DDPG) algorithm "
+                "combined with Deep Sets to tackle the aforementioned problem. Furthermore, we present a novel way "
+                "to use a Dueling Network, which leads to further performance improvement. Our proposed algorithm is "
+                "tested on both synthetic and real data, showing consistent gains against state-of-the-art conventional "
+                "methods from combinatorics, optimization, and scheduling metrics."),
+                 None),
+            Link("Paper", "https://arxiv.org/pdf/2011.13634.pdf", None, None),
+            Link("Code", "https://github.com/avranasa/DRL_Scheduling_Communications", None, None),
+            Link("Bibtex", None, None,
+                 ("@inproceedings{avranas2022deep,\n"
+                  "title={Deep Reinforcement Learning for Resource Constrained Multiclass Scheduling in Wireless Networks},\n"
+                  "author={Apostolos, Avranas and Ciblat, Philippe and Marios, Kountouris},\n"
+                  "year={2022},\n"
+                  "archivePrefix={arXiv},\n"
+                  "url={https://arxiv.org/pdf/2011.13634.pdf}\n"
+                  "}"))
+        ]
+    ),
+    Paper(
         "Coded ResNeXt: a network for designing disentangled information paths",
         None,
         "data/teaser/CodedResNeXt_MainIdea.png",
@@ -298,7 +334,7 @@ publications = [
     Paper(
         "Spatial multi-LRU caching for wireless networks with coverage overlaps",
         None,
-        "data/teaser/MultiLRU.jpg",
+        "data/teaser/MultiLRU_resized.png",
         author_list(authors,"tasos","apostolos"),
         conferences["sigmetrics"],
         2016,
